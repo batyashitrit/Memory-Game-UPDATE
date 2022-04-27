@@ -1,0 +1,65 @@
+
+    html{
+user-select: none;
+        }
+    body{
+        background-color: rgb(235, 251, 233);  
+        display: flex;
+        justify-content: center; 
+        padding: 100px;
+        background-image: url("רקע.jpg") ;
+    background-size: 2000px;
+    }
+    h1{
+        font-size:xx-large;
+        color: rgb(31, 52, 52);
+position: absolute;
+top: 5%;
+transform: translate(0, -50%);
+padding: 10px;
+}
+    
+    #game-table{
+        padding: 50px;
+        flex-wrap: wrap;
+        justify-content: center;
+        display: flex;
+        background-color: silver;
+        gap: 30px;
+        width: 900px;
+        border-style:double;
+        border-radius: 3cm;
+        border-color:rgb(31, 52, 52);
+    }
+    .card{
+       background-color:rgb(251, 200, 209);
+       margin: 10px;
+       width: 60px; height: 60px;
+       display: inline-flex;
+       padding: 60px;
+       display: flex;
+       justify-content: center;  
+       align-items: center;
+       font-size: xx-large;
+       box-shadow: 5px 5px palevioletred;
+       content-visibility: hidden;
+       border-radius: 1cm;
+       
+        }
+    .card:hover{
+        background-color: rgb(239, 62, 115);
+        cursor: pointer;
+    }
+    .show-card{
+        content-visibility: visible;
+        pointer-events: none;
+    }
+   
+    .success{
+        content-visibility: visible;
+        background-color: wheat
+    }
+    .remove-all-styles {
+    visibility: hidden;
+  }  
+    
