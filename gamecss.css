@@ -8,6 +8,7 @@ user-select: none;
         justify-content: center; 
         padding: 100px;
         background-image: url("רקע.jpg") ;
+        
     background-size: 2000px;
     }
     h1{
@@ -20,21 +21,26 @@ padding: 10px;
 }
     
     #game-table{
-        padding: 50px;
+        padding: 70px;
         flex-wrap: wrap;
         justify-content: center;
         display: flex;
         background-color: silver;
         gap: 30px;
-        width: 900px;
+        width: 1000px;
         border-style:double;
         border-radius: 3cm;
         border-color:rgb(31, 52, 52);
-    }
-    .card{
-       background-color:rgb(251, 200, 209);
-       margin: 10px;
-       width: 60px; height: 60px;
+            margin-left: auto;
+            margin-right: auto;
+            position:absolute;
+            
+            
+        }
+        .card{
+            background-color:rgb(251, 200, 209);
+            margin: 10px;
+            width: 60px; height: 60px;
        display: inline-flex;
        padding: 60px;
        display: flex;
@@ -42,8 +48,12 @@ padding: 10px;
        align-items: center;
        font-size: xx-large;
        box-shadow: 5px 5px palevioletred;
+       /* box-shadow: 5px 5px wheat; */
        content-visibility: hidden;
        border-radius: 1cm;
+       background-image: url("parents-video-tips-memory-game.jpg") ;
+       background-size: 250px;
+       background-position: center;
        
         }
     .card:hover{
@@ -53,6 +63,8 @@ padding: 10px;
     .show-card{
         content-visibility: visible;
         pointer-events: none;
+        background-color: rgb(251, 200, 209);
+        background-image: none;
     }
    
     .success{
@@ -62,4 +74,84 @@ padding: 10px;
     .remove-all-styles {
     visibility: hidden;
   }  
-    
+
+
+  .players{
+    float: left;
+    position:relative;
+    right: 10px;
+    background-color:rgb(251, 200, 209);
+    margin: 10px;
+    margin-right: 10px;
+    width: 120px; height: 60px;
+    text-align: center;
+    border-radius: 0.5cm;
+    font-size: x-large;
+    /* font-family: monospace; */
+  }
+ .turn{
+     background-color: beige;
+     float: left;
+     position:relative;
+     right: 10px;
+     margin: 10px;
+     margin-right: 10px;
+     width: 120px; height: 60px;
+     text-align: center;
+     border-radius: 0.5cm;
+     font-size: x-large;
+        animation: blinker 1s linear infinite;
+ }
+      @keyframes blinker {
+        50% {
+          opacity: 0;
+          animation-iteration-count: infinite;
+        }
+      }
+ 
+
+ .winnerText{
+    color: black;
+    font-weight: bold;
+    font-size: 90px;
+ background-color: red;
+ position: absolute;
+ animation-name: example;
+ animation-duration: 5s;
+ animation-timing-function: linear;
+ animation-delay: 2s;
+ animation-iteration-count: infinite;
+ animation-direction: alternate;
+}
+
+@keyframes example {
+ 0%   {background-color:red; left:100px; top:200px;}
+ 25%  {background-color:yellow; left:300px; top:200px;}
+ 50%  {background-color:blue; left:300px; top:400px;}
+ 75%  {background-color:green; left:100px; top:400px;}
+ 100% {background-color:red; left:100px; top:200px;}
+}
+
+#numcheck{
+    width: 100px;
+    position: absolute;
+    top: 200px;
+    height: 50px;
+
+
+}
+
+#message{
+        font-size: xx-large;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+
+}
+
+#btn{
+    width: 100px;
+    position: absolute;
+    top: 270px;
+    height: 50px;
+
+}
