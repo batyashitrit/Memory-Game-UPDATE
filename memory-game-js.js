@@ -96,8 +96,10 @@ addplayers()
 function addCards() {
   // יוצרת מערך של כרטיסים בהתאם למה שהמשתמש בחר ומתחילה לבנות את כל המשחק
   let emoje = ["🍄", "🍅", "🍆", "🍇", "🍈", "🍉", "🍊" ,"🍋" , "🍌", "🍍", "🍎", "🍏", "🍐", "🍑", "🍒", "🍓", "🍔", "🍕", "🍖", "🍗", "🍘", "🍙", "🍚", "🍛", "🍜", "🍝", "🍞", "🍟", "🍠", "🍡"]
+  
   for (let i = 0; i < cardNumReasult; i++) {
-    cards.push(emoje[i]);
+    let counter = Math.floor(Math.random() * emoje.length);
+    cards.push(emoje[counter]);
   }
   let cards2 = cards.concat(cards);
   shuffle(cards2);
@@ -230,6 +232,7 @@ function removeCard() {
   card1.forEach((v) => v.classList.add("remove-all-styles"));
   card1 = [];
 }
+
 let c = 0;
 function changeplayer() {
   changeTurn();
